@@ -1,4 +1,5 @@
 import ConfigFiles.EnvironmentVariables;
+import DataReader.DynamicDateAndTime;
 import Pages.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -15,11 +16,13 @@ public class BaseTest {
    EnvironmentVariables environmentVariables;
    PaymentPage paymentPage;
    SignUpPage signUpPage;
+   DynamicDateAndTime dynamicDateAndTime;
+
    @BeforeMethod
    public void Setup()
    {
        driver=new ChromeDriver();
-       driver.get("https://kirotravel.com/en");
+       driver.get(environmentVariables.ProductionURL);
        driver.manage().window().maximize();
        homePage = new HomePage(driver);
        loginPage= new LoginPage(driver);
@@ -28,11 +31,12 @@ public class BaseTest {
        bookingSummaryPage = new BookingSummaryPage(driver);
        signUpPage = new SignUpPage(driver);
        paymentPage = new PaymentPage(driver);
+       dynamicDateAndTime=new DynamicDateAndTime(driver);
    }
    @AfterMethod
-   public void threadDown() throws InterruptedException
+   public void threadDown()
    {
-      // Thread.sleep(6000);
-       // driver.quit();
+
+        driver.quit();
    }
 }

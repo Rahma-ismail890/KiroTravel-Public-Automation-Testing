@@ -22,7 +22,7 @@ Actions action;
     private final By pickup = By.id("departureLocation");
     private final By dropoff = By.id("arrivalLocation");
     private final By date = By.cssSelector("input[name='date']");
-    private final By time = By.cssSelector("input[placeholder='Select time']");
+    private final By time = By.cssSelector("input[name='time']");
     private final By passengersBtn = By.xpath("(//button[@type='button'][text()='Passengers'])[2]");
     private final By luggagesBtn = By.xpath("(//button[@type='button'][text()='Luggages'])[2]");
     private final By extraDataBtn =By.xpath("(//button[@type='button'][text()='Extra Data'])[2]");
@@ -34,12 +34,12 @@ Actions action;
     private final By childrenDecBtn = By.xpath("(//button[contains(@aria-label,'decrement')])[5]");
     private final By viewPriceBtn = By.xpath("//button[normalize-space()='View Prices']");
     private final By autocompletList = By.xpath("//div[contains(@class,'pac-item')]");
-    private final By timeErrorMessage = By.xpath("//span[contains(text(),'The time must be')]");
+    private final By timeErrorMessage = By.xpath("//div[contains(text(),'The time must be')]");
 
 public HomePage(WebDriver driver)
 {
    this.driver=driver;
-   wait=new WebDriverWait(driver, Duration.ofSeconds(15));
+   wait=new WebDriverWait(driver, Duration.ofSeconds(30));
    action = new Actions(driver);
    action.scrollByAmount(0,500).pause(300).perform();
 }

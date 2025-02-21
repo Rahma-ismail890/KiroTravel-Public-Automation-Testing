@@ -5,7 +5,7 @@
               "userName": "rahma",
               "Email": "hapeceh416@nike4s.com",
               "code": "20",
-              "phone": "1203002515",
+              "phone": "1203002165",
               "pass": "12345678",
               "confirmPass": "12345678"
 
@@ -14,60 +14,13 @@
               "userName": "test",
               "Email": "xobida1812@nike4s.com",
               "code": "20",
-              "phone": "12039499909",
+              "phone": "1203002199",
               "pass": "12345678",
               "confirmPass": "12345678"
             }
           ],
   "InvalidRegisterationData":
           [
-            {
-              "userName": "rahma",
-              "Email": "rahmaalshrkawy890@gmail.com",
-              "code": "20",
-              "phone": "1203003225",
-              "pass": "12345678",
-              "confirmPass": "12345678",
-              "ExpectedErrorMessage": "//p[text()='Email already exists']"
-
-            },
-            {
-              "userName": "test",
-              "Email": "xobida181233333@nike4s.com",
-              "code": "20",
-              "phone": "1202488313",
-              "pass": "12345678",
-              "confirmPass": "12345678",
-              "ExpectedErrorMessage":"//p[text()='Phone number already exists']"
-            },
-
-            {
-              "userName": "",
-              "Email": "xobida1812@nike4s.com",
-              "code": "20",
-              "phone": "1201499515",
-              "pass": "12345678",
-              "confirmPass": "12345678",
-              "ExpectedErrorMessage":"//div[contains(n(),'Name is required')]"
-            },
-            {
-              "userName": "test",
-              "Email": "",
-              "code": "20",
-              "phone": "1293499515",
-              "pass": "12345678",
-              "confirmPass": "12345678",
-              "ExpectedErrorMessage":"//div[contains(text(),'email is required')]"
-            },
-            {
-              "userName": "test",
-              "Email": "xobid444a1812@nike4s.com",
-              "code": "20",
-              "phone": "",
-              "pass": "12345678",
-              "confirmPass": "12345678",
-              "ExpectedErrorMessage": "//div[text()='phone number is't valid']"
-            },
             {
               "userName": "test",
               "Email": "xobida1812@nike4s.com",
@@ -94,7 +47,55 @@
               "pass": "12345678",
               "confirmPass": "1245678",
               "ExpectedErrorMessage":"//p[normalize-space()='Passwords do not match']"
+            },
+            {
+              "userName": "rahma",
+              "Email": "rahmaalshrkawy890@gmail.com",
+              "code": "20",
+              "phone": "1203003225",
+              "pass": "12345678",
+              "confirmPass": "12345678",
+              "ExpectedErrorMessage": "//p[contains(text(),'Email already exists')]"
+
+            },
+            {
+              "userName": "test",
+              "Email": "xobida181233333@nike4s.com",
+              "code": "20",
+              "phone": "1202488313",
+              "pass": "12345678",
+              "confirmPass": "12345678",
+              "ExpectedErrorMessage":"//p[text()='Phone number already exists']"
+            },
+
+            {
+              "userName": "",
+              "Email": "xobida1812@nike4s.com",
+              "code": "20",
+              "phone": "1201499515",
+              "pass": "12345678",
+              "confirmPass": "12345678",
+              "ExpectedErrorMessage":"//div[contains(text(),'Name is required')]"
+            },
+            {
+              "userName": "test",
+              "Email": "",
+              "code": "20",
+              "phone": "1293499515",
+              "pass": "12345678",
+              "confirmPass": "12345678",
+              "ExpectedErrorMessage":"//div[contains(text(),'email is required')]"
+            },
+            {
+              "userName": "test",
+              "Email": "xobid444a1812@nike4s.com",
+              "code": "20",
+              "phone": "",
+              "pass": "12345678",
+              "confirmPass": "12345678",
+              "ExpectedErrorMessage": "//div[contains(text(),'phone number')]"
             }
+
           ]
 }
 

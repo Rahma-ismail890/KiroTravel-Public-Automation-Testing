@@ -28,7 +28,7 @@ public class SignUpPage {
         private final By smallPass = By.xpath("//p[contains(text(),'Password must be 8-30 characters long and include ')]");
         private final By ConfirmPasscNotMatch = By.xpath("//p[normalize-space()='Passwords do not match']");
         private final By verificationMessage = By.xpath("//span[text()=' Mail Verification']");
-        private final By emailExist = By.xpath("//p[.='Email already exists']");
+        private final By emailExist = By.xpath("//p[contains(text(),'Email already exists')]");
         private final By phoneExist = By.xpath("//p[.='Phone number already exists']");
         private final  String countryCode = "//li/span[text()='+%s']";
         public SignUpPage(WebDriver driver)
@@ -88,9 +88,12 @@ public class SignUpPage {
     {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(verificationMessage)).isDisplayed();
     }
-    public boolean ErrorMessage (String errorMessage)
+    public boolean ErrorMessage (String ErrorMessage)
     {
-        return wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(errorMessage)))).isDisplayed();
+       // System.out.println(driver.findElement(By.xpath(errorMessage)).getText());
+        By error = By.xpath(ErrorMessage);
+
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(error)).isDisplayed();
     }
 
     }
