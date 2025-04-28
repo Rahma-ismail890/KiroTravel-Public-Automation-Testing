@@ -1,8 +1,54 @@
-KiroTravel Public Automation Testing
-Description
-This repository contains automated tests for the KiroTravel platform. The tests are designed to ensure the functionality, reliability, and performance of the application. The automation framework is built using [Selenium and TestNG], and the tests cover [ create account,login,forgot password, booking, payment using strip ,invoice, promocode].
+✈️ KiroTravel - Public Automation Testing
+---------------------------------------------
+Welcome to the public automation testing project for KiroTravel!
+This project is built using Selenium WebDriver to automate and validate core functionalities across the website.
 
-Installation
+📋 Project Description
+------------------------
+This repository contains automated UI tests for KiroTravel's website, developed using Selenium WebDriver.
+The purpose of this project is to:
+
+Validate the end-to-end functionality of the KiroTravel platform.
+
+Identify bugs early through automated regression testing.
+
+Support developers and testers in maintaining a high-quality user experience.
+
+🚀 Technologies Used
+-----------------------
+✅ Selenium WebDriver (Browser Automation)
+
+✅ TestNG / JUnit (for test organization and execution)
+
+✅ Java (Programming Language) (or if you use Python / JS, you can update it)
+
+✅ Maven / Gradle (Build management) (if you use them)
+
+✅ Faker Library (for generating random test data)
+
+✅ GitHub for version control
+
+📂 Project Structure
+---------------------------
+├── src/
+│   ├── main/
+│   │   └── java/
+│   │       └── pages/
+│   │       └── utils/
+│   ├── test/
+│       └── java/
+│           └── tests/
+│               └── ContactUsTest.java
+│               └── BookingFlowTest.java
+│               └── SearchTest.java
+├── pom.xml  # (If Maven project)
+├── README.md
+└── testng.xml  # (If using TestNG)
+
+
+
+🧪 How to Run the Tests Locally
+----------------------------------
 To set up the project locally, follow these steps:
 
 Clone the repository:
@@ -14,7 +60,8 @@ Clone the repository:
 
 3- npm install
 
-The following test cases are covered in this project:
+📈 The following test cases are covered in this project:
+---------------------------------------------------------
 
 Login Functionality
 
